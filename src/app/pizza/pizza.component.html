@@ -1,0 +1,17 @@
+<div class="hero">
+  <h1>Which pizza is cheaper?</h1>
+   <button class="compare" (click)="compareTwo()">COMPARE</button>
+  <div class="container1" [ngClass]="{'cheaper': cheap === 'first', 'pricy': cheap === 'second'}">
+    <img src="../../assets/pizzagood.png" class="pizza">
+    <input type="text" placeholder="Diameter" [(ngModel)]="firstDiameter">
+    <input type="text" placeholder="Price" [(ngModel)]="firstPrice">
+    <div class="price">Price for square cm {{ price1 }}</div>
+  </div>
+  <div class="container2" [ngClass]="{'cheaper': cheap === 'second', 'pricy': cheap === 'first'}">
+    <img src="../../assets/pizzagood.png" class="pizza">
+    <input type="text" placeholder="Diameter" [(ngModel)]="secondDiameter">
+    <input type="text" placeholder="Price" [(ngModel)]="secondPrice">
+    <div class="price">Price for square cm {{ price2 }}</div>
+  </div>
+ 
+</div>
